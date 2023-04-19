@@ -1,0 +1,9 @@
+<app-header></app-header>
+<app-modal-form
+  *ngIf="modal.modal"
+></app-modal-form>
+<app-modal-submit
+  *ngIf="modal.modalSubmit"
+></app-modal-submit>
+<router-outlet></router-outlet>
+<app-footer-wrapper></app-footer-wrapper>

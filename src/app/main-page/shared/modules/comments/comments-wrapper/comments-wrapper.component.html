@@ -1,0 +1,29 @@
+<div class="back-color">
+  <div class="clients-title basic-title">Look our Clients have to say about us</div>
+  <div class="comments-wrapper d-flex">
+    <button class="button-wrapper-left d-flex"
+            (click)="scrollLeft()">
+      <div class="button-item-left"></div>
+    </button>
+
+    <div class="slider d-flex">
+      <div class="clients-reviews"
+           [ngStyle]="{'left': -offset + 'px'}">
+        <div class="clients-reviews-item"
+             *ngFor="let comments of commentsArr">
+          <img class="stars p-absolute" src="assets/img/stars.png" alt="grade">
+          <img class="quote p-absolute" src="assets/img/quote.png" alt="quote">
+          <img class="clients-photo" src="assets/img/{{comments.photo}}" alt="clients-photo">
+          <div class="clients-name roboto">{{comments.name}}</div>
+          <div class="clients-city roboto">{{comments.location}}</div>
+          <div class="clients-text roboto">{{comments.text}}</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="button-wrapper-right d-flex"
+            (click)="scrollRight()">
+      <div class="button-item-right"></div>
+    </button>
+  </div>
+</div>

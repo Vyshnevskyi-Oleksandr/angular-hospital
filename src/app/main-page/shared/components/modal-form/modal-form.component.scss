@@ -1,0 +1,105 @@
+.backdrop {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal-form {
+  position: fixed;
+  z-index: 10;
+  max-height: 35rem;
+  margin:auto;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  width: 35rem;
+  background: #FFFFFF;
+  border-radius: 8px;
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: 30rem;
+  height: 5rem;
+  margin: 0 auto 2rem;
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 24px;
+  background: rgba(245, 246, 250, 1);
+  border-radius: 8px;
+  border: 1px transparent;
+
+  &::placeholder{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+
+  &.ng-valid.ng-touched {
+    border: 1px solid #40A3F8;
+  }
+}
+
+.btn-send {
+  margin-bottom: 1rem;
+  width: 8rem;
+  height: 3rem;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #FFFFFF;
+  background: #40A3F8;
+  border-radius: 5px;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  &:active {
+    opacity: 0.8;
+  }
+  &:disabled {
+    opacity: 0.2;
+  }
+}
+
+.closeModal {
+  display: block;
+  margin-top: 0.6rem;
+  margin-left: 33.9rem;
+  width: 14px;
+  height: 14px;
+  opacity: 0.2;
+  transition: opacity ease 0.5s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.closeModal::before,
+.closeModal::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 14px;
+  height: 3px;
+  background: #000;
+}
+
+.closeModal::before {
+  transform: rotate(45deg);
+}
+
+.closeModal::after {
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,23 @@
+<div class="service-block back-color">
+  <div class="service-tittle basic-title">Our Service</div>
+  <div class="service-description basic-description">Our doctors have high qualified skills and are guaranteed to
+    help you recover from your disease.
+  </div>
+  <div class="service-category">
+    <div class="service-category-element" *ngFor="let item of servicesArr; let i = index"
+         [ngClass]="{'category-active': selectedIndex === i}"
+         (click)="selectService(i)">
+      <img class="service-category-element-picture" src="{{item.picture}}" alt="logo"/>
+      <div class="service-category-element-title item-title">{{item.title}}</div>
+      <div class="service-category-element-description item-description">{{item.text}}</div>
+    </div>
+  </div>
+
+  <div class="service-circles d-flex">
+    <div class="service-circle"
+         *ngFor="let dot of servicesArr; let i = index"
+         [ngClass]="{'circle-active': selectedIndex === i}"
+         (click)="selectService(i)"
+    ></div>
+  </div>
+</div>

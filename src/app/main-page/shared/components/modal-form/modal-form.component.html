@@ -1,0 +1,14 @@
+<div class="backdrop">
+  <form [formGroup]="form" (ngSubmit)="submit()" class="modal-form">
+  <a class="closeModal" (click)="modal.switchModal()"></a>
+  <input formControlName="name" type="text" placeholder="Your Name">
+  <input formControlName="surname" type="text" placeholder="Your Surname">
+  <input formControlName="email" type="email" placeholder="Your E-Mail">
+  <input formControlName="phone" type="tel" placeholder="Your Phone Number">
+  <button (click)="modal.switchDouble()"
+          class="btn-send poppins"
+          [disabled]="form.invalid"
+          type="submit">Send</button>
+  </form>
+</div>
+

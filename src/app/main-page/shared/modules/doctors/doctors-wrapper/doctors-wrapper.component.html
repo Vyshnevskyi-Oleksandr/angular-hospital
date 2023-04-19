@@ -1,0 +1,24 @@
+<div class="doctors-block back-color">
+  <div class="doctors-title basic-title">Meet Our Certified Online Doctors</div>
+  <div class="doctors-descriptions basic-description">Our online doctors have an average of 15 years experience
+    and a 98% satisfaction rating, they really set us apart!
+  </div>
+  <div class="slide-block"
+       [ngClass]="{'slide-block-active': doctorsToggle, 'slide-block-disactive': !doctorsToggle}">
+    <div class="doctors-card-block">
+      <div class="doctors-card-element"
+           *ngFor="let doctors of doctorsArr"
+      >
+        <img class="doctors-card-photo" src="{{doctors.picture}}" alt="photo">
+        <div class="doctors-card-title item-title">{{doctors.title}}</div>
+        <div class="item-description">{{doctors.text}}</div>
+        <div class="doctors-card-networks d-flex">
+          <a *ngFor="let icon of iconsArr" href="#"><img src="{{icon.icon}}" alt="{{icon.alt}}"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="toggle()"
+          class="explore-doctors explore-button roboto">{{buttonName}}
+  </button>
+</div>

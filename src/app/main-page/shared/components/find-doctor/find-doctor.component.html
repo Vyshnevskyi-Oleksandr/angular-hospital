@@ -1,0 +1,25 @@
+<div class="find-wrapper d-flex">
+  <div class="find-search-block p-relative">
+    <div class="find-search-title roboto"> <p class="find-black">Find And Search Your</p> <p class="find-blue">Suitable Doctor’s</p> </div>
+    <div class="find-search-description roboto">Join us and take care of yourself and your family with health services that will make you feel confident and safe in your daily life.</div>
+    <div class="find-search-wrapper d-flex">
+      <form [formGroup]="form" (ngSubmit)="submit()" class="form-search d-flex">
+      <input formControlName="text" class="search-row poppins" placeholder="Find your doctor" type="text" name="e-mail" value=""/>
+      <button  [disabled]="form.invalid" type="submit" class="search-button"><img class="search-button-img" src="assets/img/search.png" alt="loop"></button>
+      </form>
+    </div>
+  </div>
+  <div class="find-image-block p-relative">
+    <img class="back-shape p-absolute" src="assets/img/back-shape.png" alt="back-shape">
+    <img class="young-female p-absolute" src="assets/img/young-female.png" alt="young-female">
+    <img class="call p-absolute" src="assets/img/call.png" alt="call">
+    <img class="chat p-absolute" src="assets/img/chat.png" alt="chat">
+    <img class="video p-absolute" src="assets/img/video.png" alt="video">
+    <div class="happy-patients p-absolute">
+      <img class="heart" src="assets/img/heart.png" alt="heart">
+      <div class="happy-patients-score poppins">2500+</div>
+      <div class="happy-patients-description poppins">Happy Patients</div>
+    </div>
+    <img class="review p-absolute" src="assets/img/review.png" alt="review">
+  </div>
+</div>

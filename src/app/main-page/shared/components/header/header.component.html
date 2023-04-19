@@ -1,0 +1,10 @@
+<div class="header-wrapper d-flex">
+  <img src="assets/img/logo.png" alt="logotype">
+  <div class="header-menu d-flex">
+    <button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['']" class="menu-button poppins">Home</button>
+    <button routerLinkActive="active" [routerLink]="['about']" class="menu-button poppins">About</button>
+    <button routerLinkActive="active" [routerLink]="['doctors']" class="menu-button poppins">Doctors</button>
+    <button routerLinkActive="active" [routerLink]="['services']" class="menu-button poppins">Services</button>
+  </div>
+  <button (click)="modal.switchModal()" class="button-start poppins d-flex">Get Started</button>
+</div>

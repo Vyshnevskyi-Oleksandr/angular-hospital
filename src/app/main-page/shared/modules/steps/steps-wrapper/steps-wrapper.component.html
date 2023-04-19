@@ -1,0 +1,12 @@
+<div class="easy-steps-wrapper">
+  <div class="easy-steps-title roboto">3 Easy Steps and Get Your Solution</div>
+  <div class="easy-steps-table">
+  <div *ngFor="let item of stepsArr">
+    <div class="easy-steps-item-picture-first easy-steps-item-picture d-flex">
+      <img class="pic-grid" src="{{item.picture}}" alt="img">
+    </div>
+    <div class="easy-steps-item-title roboto">{{item.title}}</div>
+    <div class="easy-steps-item-description roboto">{{item.text}}</div>
+  </div>
+  </div>
+</div>
